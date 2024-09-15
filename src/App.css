@@ -1,38 +1,382 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+html {
+  scroll-behavior: smooth;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.landingpage {
+  display: flex;
+  position: relative;
   min-height: 100vh;
+}
+
+.left {
+  justify-content: space-between;
+  min-height: 100vh;
+  width: 50%; /* Set the width to 50% to make room for the right div */
+  background-color: #090e0c;
+}
+
+.right {
+  min-height: 100vh;
+  width: 50%; /* Set the width to 50% to make room for the left div */
+  background-image: url("./asset/espresso.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.landingpage > .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -330%);
+  z-index: 1; /* Make sure the logo is on top of the divs */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  padding: 1em;
+  color: #000000;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.wrap-navigation {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #fffbfb;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  color: #ccc;
+}
+.wrap-contact {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  text-decoration: none;
+}
+
+.wrap-contact a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 20px;
+  border: 1px solid white;
+}
+
+.wrap-contact a:hover {
+  color: black;
+  border: 1px solid black;
+}
+.wrap-quote {
+  width: 70%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+.wrap-quote a {
+  display: flex;
+  text-align: left;
+}
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+.about-us {
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  background-color: #090e0c;
+}
+.review {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #090e0c;
+}
+.image1,
+.image2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  width: 400px;
+  height: 400px;
+}
+.image1 {
+  background-image: url("./asset/CoffeArt.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image2 {
+  background-image: url("./asset/CoffeShop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.satisfaction {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 400px;
+  height: 400px;
+  gap: 30px;
+}
+.satisfaction h1,
+.satisfaction p {
+  margin: 0;
+}
+.google-maps {
+  width: 700px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+.our-best-product {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #090e0c;
+}
+
+.product-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 10px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  background-image: url("./asset/KopiGulaAren.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  background-image: url("./asset/cappuccino.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  background-image: url("./asset/VanillaLatte.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  background-image: url("./asset/Americano.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.product-description {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 250px;
+  height: 150px;
+  border-bottom: 3px solid #e4d0a0;
+  border-left: 3px solid #e4d0a0;
+  border-right: 3px solid #e4d0a0;
+  font-kerning: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.product-description h1,
+.product-description p,
+.product-description h3 {
+  margin-bottom: -5px;
+}
+.wrap-footer {
+  display: flex;
+  width: auto;
+  gap: 65px;
+  margin-top: 20px;
+}
+footer a {
+  text-decoration: none;
+  color: #d9d9d9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 500px) {
+  .wrap-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: "center";
   }
-  to {
-    transform: rotate(360deg);
+  iframe {
+    width: 200px;
+    height: 300px;
+  }
+  header {
+    display: none;
+  }
+  .landingpage {
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    flex-direction: column; /* Add this to make the quote and image stack vertically */
+  }
+  .landingpage > .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -645%);
+    z-index: 1; /* Make sure the logo is on top of the divs */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .left {
+    justify-content: space-between;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Set the width to 50% to make room for the right div */
+    background-color: #090e0c;
+    display: flex; /* Add this to make the quote and image stack vertically */
+    flex-direction: column; /* Add this to make the quote and image stack vertically */
+  }
+
+  .quote-position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Reduce the height to make room for the image */
+  }
+
+  .wrap-quote {
+    width: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right {
+    min-height: 100vh; /* Reduce the height to make room for the quote */
+    width: auto; /* Set the width to 50% to make room for the left div */
+    background-image: url("./asset/espresso.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; /* Add this to make the image take up the full height */
+    justify-content: center;
+    align-items: center;
+  }
+  .google-maps {
+    width: auto;
+    height: auto;
+  }
+  .our-best-product {
+    align-items: center;
+    justify-content: center;
+  }
+  .image1,
+  .image2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    width: 300px;
+    height: 300px;
+  }
+  .satisfaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    gap: 30px;
+  }
+  .our-best-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrap-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width:768px){
+  .google-maps {
+    width: 400px;
+    height: 200px;
+  }
+}
+@media (max-width:600px){
+  .navigation{
+    display: none;
+  }
+}
+@media (max-width:400px){
+  .google-maps{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
